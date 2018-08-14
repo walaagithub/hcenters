@@ -1,3 +1,38 @@
 page-about {
+    ion-card-header {
+        background-color: red;
+    }
+    .gps1{
+        float:left;
+        padding-top: 5px;
+        min-width: 30px;
+        min-height: 30px;
+        background:white;
+    }
 
+    .rate1{
+        contain: size;
+        float: right;
+        padding-top: 5px;
+        min-width: 25px;
+        min-height: 25px;
+        background:white;
+    }
+    .card1{
+       margin: 20px auto 0;
+        // border: 1px solid rgb(162, 158, 158); 
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .block {
+        position: relative;
+        .deleteIcon {
+          position: absolute !important;
+          color: #ffffff !important;
+          margin-left: 80% !important;
+        }
+        .deleteIcon:before {
+          font-size: 30px !important;
+        }
+    }    
 }
