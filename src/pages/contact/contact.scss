@@ -1,0 +1,49 @@
+page-contact {
+.swipe1{
+    margin: 20px;
+    height: 60px;
+    
+
+}
+.swipe1 h2 
+{
+    // font-size: 2.6rem;
+}
+.list
+{
+    margin-top: 3px;
+}
+.toggle-md.toggle-checked .toggle-icon {
+    background-color: rgb(223, 173, 173);
+}
+
+.toggle-md.toggle-checked .toggle-inner {
+    -webkit-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
+    background-color:red;
+}
+ 
+ .list .text1 , .text2 {
+    text-align: justify;
+    text-justify: distribute ;
+    direction: rtl;
+    margin: 20px 60px 20px 60px;
+    font-size:14px;
+    font-weight: bold;
+   
+ }
+ .list h2{
+    font-size:14px;
+    font-weight: bold;
+    color: red;
+ }
+ 
+ .card-md {
+    margin: 38px;
+    margin-top: 2px;
+    border-radius: 2px;
+    width: calc(86% - 20px);
+    font-size: 1.4rem;
+    background: #fff;
+ }
+}
