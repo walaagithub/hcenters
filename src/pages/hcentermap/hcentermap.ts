@@ -52,7 +52,7 @@ export class HcentermapPage {
       let mapOptions =
       {
           center:LatLng,
-          zoom: 6,
+          zoom: 8,
           mapTypeId: google.maps.MapTypeId.ROADMAP
       }
       
