@@ -67,7 +67,7 @@ export class HcentermapPage {
 
         for (const value of this.itemArray) 
         {
-          if(value['info'] === this.itemName )
+          if(value['name'] === this.itemName )
           {
               console.log(value['info']);
               console.log(value['latitude']);
