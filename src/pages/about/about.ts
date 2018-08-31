@@ -1,6 +1,8 @@
+import { AngularFireDatabase , AngularFireList } from 'angularfire2/database';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HcentermapPage } from '../hcentermap/hcentermap';
+
 
 @Component({
   selector: 'page-about',
@@ -8,20 +10,28 @@ import { HcentermapPage } from '../hcentermap/hcentermap';
 })
 export class AboutPage {
 
+  itemList : AngularFireList<any>;
   searchQuery: string = '';
-  items: string[];
+  items=[];
 
-  constructor(private navCtrl:NavController) {
+  constructor(private navCtrl:NavController , public db:AngularFireDatabase) {
+
+    // Database
+    this.itemList = db.list('centerLoc');
+
+    this.itemList.snapshotChanges().subscribe( actions => {
+        actions.forEach( action =>{
+        let y = action.payload.toJSON();
+        this.items.push(y['name']);
+        });
+    });
+    
     this.initializeItems();
+
   }
 
   initializeItems() {
-    this.items = [
-      'مركز صحي واسط',
-      'مركز صحي الجامعة',
-      'مركز صحي عرفة'
-    
-    ];
+
   }
 
   getItems(ev: any) {
