@@ -42,8 +42,10 @@ page-contact {
     margin: 38px;
     margin-top: 2px;
     border-radius: 2px;
+    border-color: red;
     width: calc(86% - 20px);
     font-size: 1.4rem;
     background: #fff;
+    box-shadow: 7px 4px 2px 0 rgba(245, 9, 9, 0.14), 0 3px 1px -2px rgb(247, 0, 0), 0 1px 5px 0 rgb(251, 12, 12);
  }
 }

@@ -6,13 +6,21 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import{AddcenterPage} from '../pages/addcenter/addcenter';
 import { TabsPage } from '../pages/tabs/tabs';
+import { HcentermapPage } from './../pages/hcentermap/hcentermap';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-
 import { AppRate } from '@ionic-native/app-rate';
+
+// Angularfire2 firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { firebaseConfig } from './Credentails';
+import { MyServiceProvider } from '../providers/my-service/my-service';
 
 @NgModule({
   declarations: [
@@ -20,11 +28,15 @@ import { AppRate } from '@ionic-native/app-rate';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    HcentermapPage,
+    AddcenterPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,13 +44,18 @@ import { AppRate } from '@ionic-native/app-rate';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    HcentermapPage,
+    AddcenterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AppRate
+    MyServiceProvider,
+    AppRate,
+
+  
   ]
 })
 export class AppModule {}

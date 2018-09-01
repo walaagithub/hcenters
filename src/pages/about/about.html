@@ -14,8 +14,12 @@
           <ion-card-header>
               {{ item }}
         </ion-card-header>
-        <ion-img class="gps1" src="../../assets/imgs/map_icon.png" ></ion-img>
-        <ion-img class="rate1" src="../../assets/imgs/rate.png"></ion-img>
+        <!-- <ion-img class="gps1" src="../../assets/imgs/map_icon.png" (click)="GotoHcentermap(item);" ></ion-img>
+        <ion-img class="rate1" src="../../assets/imgs/rate.png"></ion-img> -->
+
+
+        <div class="gps1" (click)="GotoHcentermap(item);"><img  src="../../assets/imgs/map_icon.png" ></div>
+        <div class="rate1"><img  src="../../assets/imgs/rate.png"></div>
   </ion-card>
   </ion-list>
   <!-- <ion-list>
