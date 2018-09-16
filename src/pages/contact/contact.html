@@ -58,20 +58,20 @@
 
     <ion-item>
       <ion-icon name="book" item-left></ion-icon>
-      <ion-label>البرمجة من اجل العراق</ion-label>
+      <ion-label class="about">البرمجة من اجل العراق</ion-label>
       <ion-toggle [(ngModel)]="part1"></ion-toggle>
 
     </ion-item>
 
     <ion-item>
       <ion-icon name="alert" item-left></ion-icon>
-      <ion-label>فريق العمل</ion-label>
+      <ion-label class="about">فريق العمل</ion-label>
       <ion-toggle [(ngModel)]="part2"></ion-toggle>
 
     </ion-item>
     <ion-item>
       <ion-icon name="star" item-left></ion-icon>
-      <ion-label>التقييم</ion-label>
+      <ion-label class="about">التقييم</ion-label>
       <ion-toggle [(ngModel)]="part3" [(ngModel)]="isToggled" (ionChange)="YES1()"></ion-toggle>
 
     </ion-item>
@@ -96,7 +96,7 @@
               <h2>سوران احمد حسن</h2>
             </ion-item>
             <ion-item>
-                <ion-avatar item-start>
+                <ion-avatar item-start >
                   <img src="../../assets/imgs/logoname.jpg">
                 </ion-avatar>
                 <h2>ولاء تحسين فاضل </h2>

@@ -10,6 +10,9 @@ import{AddcenterPage} from '../pages/addcenter/addcenter';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HcentermapPage } from './../pages/hcentermap/hcentermap';
 
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,6 +24,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { firebaseConfig } from './Credentails';
 import { MyServiceProvider } from '../providers/my-service/my-service';
+import { AngularFireAuthModule,AngularFireAuth } from 'angularfire2/auth';
+
 
 @NgModule({
   declarations: [
@@ -30,13 +35,16 @@ import { MyServiceProvider } from '../providers/my-service/my-service';
     HomePage,
     TabsPage,
     HcentermapPage,
-    AddcenterPage
+    AddcenterPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +54,9 @@ import { MyServiceProvider } from '../providers/my-service/my-service';
     HomePage,
     TabsPage,
     HcentermapPage,
-    AddcenterPage
+    AddcenterPage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

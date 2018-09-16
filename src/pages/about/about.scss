@@ -34,5 +34,30 @@ page-about {
         .deleteIcon:before {
           font-size: 30px !important;
         }
-    }    
+
+
+        .custom-button {
+            background-color:#f8f8f8;
+            
+        }
+    
+    } 
+    ion-spinner * {
+        width: 50px;
+    height: 45px;
+      }
+
+      //dir search bar
+      .searchbar-input {
+          direction: rtl;
+      }
+//cards font size and shadow
+      .card-header-md {
+        font-size: 1.4rem;
+        text-shadow:  0px 4px 3px rgba(0,0,0,0.2),
+        0px 8px 13px rgba(0,0,0,0.1),
+        0px 18px 23px rgba(0,0,0,0.1);
+
+
+      }
 }
