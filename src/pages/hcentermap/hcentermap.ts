@@ -72,10 +72,19 @@ export class HcentermapPage {
               console.log(value['info']);
               console.log(value['latitude']);
               console.log(value['longitude']);
-              let marker = new google.maps.Marker({
-              position : new google.maps.LatLng(value['latitude'],value['longitude']),
-              map: new google.maps.Map(this.mapElement.nativeElement, mapOptions)
+              let marker = new google.maps.Marker
+              ({
+                  position : new google.maps.LatLng(value['latitude'],value['longitude']),
+                  map: new google.maps.Map(
+                                        this.mapElement.nativeElement,
+                                        {     
+                                          center:new google.maps.LatLng(value['latitude'],value['longitude']),
+                                          zoom: 13,
+                                          mapTypeId: google.maps.MapTypeId.ROADMAP
+                                        }
+                                      )
               });
+            
               marker.info = new google.maps.InfoWindow({
                 content: value['info']
               });
